@@ -68,6 +68,10 @@ body {
     margin: 0;
 }
 
+.read-bt:hover, .user-content:hover, .user-group:hover, .user-msg:hover, .container-kimberly-photo:hover {
+    cursor: pointer;
+}
+
 .main-container {
     display: flex;
     flex-direction: column;
@@ -75,7 +79,7 @@ body {
     width: 100%;
 }
 
-.individual-notifications, .container-message, .msg-notifications  {
+.individual-notifications, .container-message, .msg-notifications {
     background-color: var(--white);
     width: 90%;
     margin: 0 auto;
@@ -149,6 +153,11 @@ body {
     width: 80%;
     box-sizing: border-box;
     color: var(--darkGrayishBlue);
+}
+
+.user-msg:hover {
+    border-style: none;
+    background-color: var(--lightGrayishBlueOne);
 }
 
 .commented-photo {
