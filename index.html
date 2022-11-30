@@ -5,79 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="notifications, status notification, read notifications, unread notifications">
     <meta description="description" content="Check and manipulate your notifications">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap" rel="stylesheet">
     <title>Notifications Page</title>
 </head>
 <body>
     
-    <header>
-
-        <h1>Notifications</h1>
-        <span class="notifications-number" id="notifications-number"></span>
-        <button class="read-bt" id="read-bt">Mark all as read</button>
-
+    <!-- Top of the page -->
+    <header class="index-header">
+        <div class="container-header">
+            <div class="notifications-status">
+                <h1>Notifications</h1>
+                <span class="notifications-number" id="notifications-number">3</span>
+            </div>
+            <button class="read-bt" id="read-bt">Mark all as read</button>
+        </div>
     </header>
 
-    <main>
-        <section class="individual-notifications">
+    <!-- Notifications -->
+    <main class="main-container">
+        <section class="individual-notifications new-notifications">
             
             <img src="assets/images/avatar-mark-webber.webp" alt="Mark Webber avatar photo">
 
             <div class="notifications-content">
-                <h1>Mark Webber</h1>
-                <p>reacted to your recent post</p>
-                <h3>My first tournament today!</h3>
-                <p>1m ago</p>
+                <span class="user-name">Mark Webber</span>
+                <span class="user-action">reacted to your recent post</span>
+                <span class="user-content">My first tournament today!</span>
+                <p class="action-time">1m ago</p>
             </div>
            
         </section>
 
-        <section class="individual-notifications">
+        <section class="individual-notifications new-notifications">
 
             <img src="assets/images/avatar-angela-gray.webp" alt="Angela Gray avatar photo">
            
             <div class="notifications-content">
-                <h1>Angela Gray</h1>
-                <p>followed you</p>
-                <p>5m ago</p>
+                <span class="user-name">Angela Gray</span>
+                <span class="user-action">followed you</span>
+                <p class="action-time">5m ago</p>
             </div>
         </section>
 
-        <section class="individual-notifications">
+        <section class="individual-notifications new-notifications">
 
             <img src="assets/images/avatar-jacob-thompson.webp" alt="Jacob Thompson avatar photo">
 
             <div class="notifications-content">
-                <h1>Jacob Thompson</h1>
-                <p>sent you a private message</p>
-                <h3>Chess Club</h3>
-                <p>1 day ago</p>
+                <span class="user-name">Jacob Thompson</span>
+                <span class="user-action">sent you a private message</span>
+                <span class="user-group">Chess Club</span>
+                <p class="action-time">1 day ago</p>
             </div>
         </section>
 
-        <section class="individual-notifications">
+        <section class="individual-notifications msg-notifications">
 
+          <div class="container-message">
             <img src="assets/images/avatar-rizky-hasanuddin.webp" alt="Rizky Hasanuddin avatar photo">
-
+            
             <div class="notifications-content">
-                <h1>Rizky Hasanuddin</h1>
-                <p>has joined your group</p>
-                <p>5 days ago</p>
+                <span class="user-name">Rizky Hasanuddin</span>
+                <span class="user-action">has joined your group</span>
+                <p class="action-time">5 days ago</p>
+            </div> 
             </div>
-
-            <div>
+        
+            <div class="user-msg">
                 <p>Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.</p>
             </div>
         </section>
-
+        
         <section class="individual-notifications">
 
             <img src="assets/images/avatar-kimberly-smith.webp" alt="Kimberly Smith avatar photo">
 
             <div class="notifications-content">
-                <h1>Kimberly Smith</h1>
-                <p>commented on your picture</p>
-                <img src="assets/images/image-chess.webp" alt="Comented photo playing chess">
-                <p>1 week ago</p>
+                <span class="user-name">Kimberly Smith</span>
+                <span class="user-action commented-photo">commented on your picture</span>
+                <div class="container-kimberly-photo">
+                   <img src="assets/images/image-chess.webp" alt="Comented photo playing chess">
+                </div>
+                <p class="action-time">1 week ago</p>
             </div>
         </section>
 
@@ -86,10 +99,10 @@
             <img src="assets/images/avatar-nathan-peterson.webp" alt="Nathan Peterson avatar photo">
 
             <div class="notifications-content">           
-                <h1>Nathan Peterson</h1>
-                <p>reacted to your recent post</p>
-                <h3>5 end-game strategies to increase your win rate</h3>
-                <p>2 weeks ago</p>
+                <span class="user-name">Nathan Peterson</span>
+                <span class="user-action">reacted to your recent post</span>
+                <span class="user-content">5 end-game strategies to increase your win rate</span>
+                <p class="action-time">2 weeks ago</p>
             </div>
         </section>
 
@@ -98,17 +111,18 @@
             <img src="assets/images/avatar-anna-kim.webp" alt="Anna Kim avatar photo">
 
             <div class="notifications-content">
-                <h1>Anna Kim</h1>
-                <p>left the group</p>
-                <h3>Chess Club</h3>
-                <p>2 weeks ago</p>
+                <span class="user-name">Anna Kim</span>
+                <span class="user-action">left the group</span>
+                <span class="user-group">Chess Club</span>
+                <p class="action-time">2 weeks ago</p>
             </div>
         </section>
     </main>
 
-    <div class="attribution">
+    <!-- Bottom of the page (about project) -->
+    <footer class="attribution">
         <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
         Coded by <a href="#">Caroline Almeida Nikolic</a>.</p>
-    </div>
+    </footer>
 </body>
 </html>

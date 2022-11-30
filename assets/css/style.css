@@ -1,0 +1,286 @@
+/* Colors */
+:root {
+    --blue: hsl(219, 85%, 26%);
+    --red: hsl(1, 90%, 64%);
+    --white: hsl(0, 0%, 100%);
+    --veryLightGreyishBlue: hsl(210, 60%, 98%);
+    --lightGrayishBlueOne: hsl(211, 68%, 94%);
+    --lightGrayishBlueTwo: hsl(205, 33%, 90%);
+    --grayishBlue: hsl(219, 14%, 63%);
+    --darkGrayishBlue: hsl(219, 12%, 42%);
+    --veryDarkBlue: hsl(224, 21%, 14%);
+
+}
+
+/* General configuration */
+html {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background: var(--white); 
+}
+
+.index-header {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8% 5% 8% 5%;
+    margin: 0 auto;
+}
+
+.container-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin: 0 auto;
+}
+
+.notifications-status {
+    display: flex;
+    width: 70%;
+    align-items: center;
+}
+
+.index-header h1 {
+    color: var(--veryDarkBlue);
+    font-weight: 800;
+}
+
+.notifications-number {
+    width: 10%;
+    background-color: var(--blue);
+    border-radius: 5px;
+    margin-left: 5%;
+    color: var(--white);
+    text-align: center;
+    vertical-align: middle;
+    padding: 2%;
+    font-weight: 700;
+}
+
+.read-bt {
+    background: var(--white);
+    border-style: none;
+    color: var(--grayishBlue);
+    text-align: right;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+    width: 100%;
+}
+
+.individual-notifications, .container-message, .msg-notifications  {
+    background-color: var(--white);
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    line-height: 1.4;
+    border-radius: 10px;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.msg-notifications {
+    display: block;
+}
+
+.individual-notifications img {
+    width: 20%;
+}
+
+.container-message {
+    width: 100%;
+}
+
+.new-notifications {
+    background-color: var(--veryLightGreyishBlue);
+}
+
+.notifications-content {
+    padding: 3%;
+    width: 100%;
+    position: relative;
+}
+
+.new-notifications > .notifications-content::after {
+    content: '';
+    background: var(--red);
+    height: 8px;
+    width: 8px;
+    position: absolute;
+    right: -2%;
+    bottom: 50%;
+    border-radius: 50%;
+}
+
+.user-name {
+    font-weight: 700;
+}
+
+.user-action {
+    color: var(--grayishBlue);
+}
+
+.user-content {
+    color: var(--darkGrayishBlue);
+    font-weight: 700;
+}
+
+.user-group {
+    color: var(--blue);
+    font-weight: 700;
+}
+
+.action-time {
+    color: var(--grayishBlue);
+    opacity: 0.8;
+}
+
+.user-msg {
+    padding: 3%;
+    border: 1px solid var(--lightGrayishBlueTwo);
+    border-radius: 5px;
+    width: 80%;
+    box-sizing: border-box;
+    color: var(--darkGrayishBlue);
+}
+
+.commented-photo {
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.container-kimberly-photo {
+    display: flex;
+    position: absolute;
+    width: 70%;
+    bottom: 20%;
+    right: 5%;
+    justify-content: flex-end;
+}
+
+.attribution {
+    text-align: center;
+    padding: 5%;
+    color: var(--veryDarkBlue);
+}
+
+.atribution a:hover, a:visited, a:link, a:active {
+    text-decoration: none;
+    color: var(--veryDarkBlue);
+    font-weight: 700;
+}
+
+/* Mobile devices */
+@media (min-width: 320px) and (max-width: 480px) {
+    
+    .notifications-number {
+        font-size: 0.7em;
+    }
+
+    .read-bt {
+        font-size: 0.6em;
+    }
+
+    .index-header h1 {
+        font-size: 1em;
+    }
+
+    .notifications-content {
+        font-size: 0.7em;
+    }
+
+    .user-msg {
+        margin-left: 20%;
+        font-size: 0.8em;
+    }
+
+    .attribution {
+        font-size: 0.5em;
+    }  
+}
+
+/* iPads, Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+
+    .notifications-number {
+        font-size: 1em;
+    }
+
+    .read-bt {
+        font-size: 0.9em;
+    }
+
+    .index-header h1 {
+        font-size: 1.5em;
+    }
+
+
+    .notifications-content {
+        font-size: 0.9em;
+    }
+
+    .user-msg {
+        margin-left: 20%;
+        font-size: 0.9em;  
+    } 
+
+    .attribution {
+        font-size: 0.6em;
+    }  
+}
+
+/* Small screens, laptops */
+@media (min-width: 769px) {
+    .index-header {
+        padding: 3% 0;
+        width: 80%;
+    }
+
+    .notifications-number {
+        font-size: 1em;
+        width: 5%;
+        padding: 1%;
+    }
+
+    .read-bt {
+        font-size: 1em;
+    }
+
+    .index-header h1 {
+        font-size: 1.5em;
+    }
+
+    .individual-notifications {
+        padding: 1%; 
+        width: 80%;
+    }
+
+    .individual-notifications img {
+        width: 10%;
+    }
+
+    .notifications-content {
+        font-size: 1em;
+    }
+
+    .new-notifications > .notifications-content::after {
+        right: 1%;
+    }
+
+    .user-msg {
+        margin-left: 12%;
+        font-size: 1em; 
+    }
+
+    .attribution {
+        font-size: 0.8em;
+    }
+}
