@@ -21,46 +21,49 @@
                 <h1>Notifications</h1>
                 <span class="notifications-number" id="notifications-number">3</span>
             </div>
-            <button class="read-bt" id="read-bt">Mark all as read</button>
+            <button type="button" class="read-bt" id="read-bt">Mark all as read</button>
         </div>
     </header>
 
     <!-- Notifications -->
     <main class="main-container">
-        <section class="individual-notifications new-notifications">
+        
+        <section class="individual-notifications new-notifications" id="notification-one">
             
             <img src="assets/images/avatar-mark-webber.webp" alt="Mark Webber avatar photo">
 
-            <div class="notifications-content">
+            <div class="notifications-content" id="notifications-content-one">
                 <span class="user-name">Mark Webber</span>
                 <span class="user-action">reacted to your recent post</span>
                 <span class="user-content">My first tournament today!</span>
                 <p class="action-time">1m ago</p>
             </div>
-           
+
         </section>
 
-        <section class="individual-notifications new-notifications">
+        <section class="individual-notifications new-notifications" id="notification-two">
 
             <img src="assets/images/avatar-angela-gray.webp" alt="Angela Gray avatar photo">
            
-            <div class="notifications-content">
+            <div class="notifications-content" id="notifications-content-two">
                 <span class="user-name">Angela Gray</span>
                 <span class="user-action">followed you</span>
                 <p class="action-time">5m ago</p>
             </div>
+
         </section>
 
-        <section class="individual-notifications new-notifications">
+        <section class="individual-notifications new-notifications" id="notification-three">
 
             <img src="assets/images/avatar-jacob-thompson.webp" alt="Jacob Thompson avatar photo">
 
-            <div class="notifications-content">
+            <div class="notifications-content" id="notifications-content-three">
                 <span class="user-name">Jacob Thompson</span>
                 <span class="user-action">sent you a private message</span>
                 <span class="user-group">Chess Club</span>
                 <p class="action-time">1 day ago</p>
             </div>
+
         </section>
 
         <section class="individual-notifications msg-notifications">
@@ -78,6 +81,7 @@
             <div class="user-msg">
                 <p>Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.</p>
             </div>
+
         </section>
         
         <section class="individual-notifications">
@@ -92,6 +96,7 @@
                 </div>
                 <p class="action-time">1 week ago</p>
             </div>
+
         </section>
 
         <section class="individual-notifications">
@@ -104,6 +109,7 @@
                 <span class="user-content">5 end-game strategies to increase your win rate</span>
                 <p class="action-time">2 weeks ago</p>
             </div>
+
         </section>
 
         <section class="individual-notifications">
@@ -116,6 +122,7 @@
                 <span class="user-group">Chess Club</span>
                 <p class="action-time">2 weeks ago</p>
             </div>
+
         </section>
     </main>
 
@@ -125,4 +132,5 @@
         Coded by <a href="#">Caroline Almeida Nikolic</a>.</p>
     </footer>
 </body>
+<script src="./assets/js/script.js"></script>
 </html>
